@@ -14,18 +14,23 @@ public class FoodMenu : MonoBehaviour
     private int index;
 
     void Start(){
-        spawnPosition = new Vector3(3, 2, -4);
+    //objects should spawn in front of character (tagged "Character")
+        GameObject character = GameObject.FindWithTag("Character");
+        spawnPosition = new Vector3(3, 2, character.transform.position.z - 1);
     }
 
     void OnEnable(){
+    //start with not showing any food on the right side of the menu
         food.sprite = null;
     }
 
     public void ChangePicture(Sprite currentFood){
+    //once clicked on, show current food on right side of menu
         food.sprite = currentFood;
     }
 
     public void ChangeMenu(int active){
+    //to make it look like the tab is on the current side of the menu
         menu.sprite = menus[active];
         for(int i = 0; i < 3; i++){
             tabs[i].SetActive(false);
@@ -35,6 +40,7 @@ public class FoodMenu : MonoBehaviour
     }
 
     public void ActivateButtons(int active){
+    //only show the buttons (text) of the current part of the menu
         for(int i = 0; i < 3; i++){
             buttons[i].SetActive(false);
         }
@@ -42,10 +48,12 @@ public class FoodMenu : MonoBehaviour
     }
 
     public void SetIndex(int i){
+    //index saves food that was last clicked on (chosen in menu)
         index = i;
     }
 
     public void SpawnFood(){
+    //spawn chosen food from prefab
         GameObject foodToSpawn = foodPrefabs[index];
         Instantiate(foodToSpawn, spawnPosition, Quaternion.identity);
     }
