@@ -8,8 +8,8 @@ public class FoodMenu : MonoBehaviour
     public Image food, menu;
     public GameObject[] foodPrefabs;
     private Vector3 spawnPosition;
-    public GameObject[] tabs;
-    public GameObject[] buttons;
+    public GameObject[] tabs, buttons;
+    private GameObject[] menuButtons;
     public Sprite[] menus;
     private int index;
 
@@ -17,6 +17,7 @@ public class FoodMenu : MonoBehaviour
     //objects should spawn in front of character (tagged "Character")
         GameObject character = GameObject.FindWithTag("Character");
         spawnPosition = new Vector3(3, 2, character.transform.position.z - 1);
+        menuButtons = GameObject.FindGameObjectsWithTag("MenuButton");
     }
 
     void OnEnable(){
@@ -56,5 +57,8 @@ public class FoodMenu : MonoBehaviour
     //spawn chosen food from prefab
         GameObject foodToSpawn = foodPrefabs[index];
         Instantiate(foodToSpawn, spawnPosition, Quaternion.identity);
+        for(int i = 0; i < menuButtons.Length; i++){
+            menuButtons[i].GetComponent<Button>().interactable = false;
+        }
     }
 }

@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DragObject : MonoBehaviour
 {
     private Vector3 mOffset;
     private float mZCoord;
+    private GameObject[] menuButtons;
+
+    void Start(){
+        menuButtons = GameObject.FindGameObjectsWithTag("MenuButton");
+    }
 
     void OnMouseDown()
     {
@@ -35,8 +41,10 @@ public class DragObject : MonoBehaviour
 
         if (x >= -1 && x <= 1.8 && y >= 0 && y <= 4.5)
         {
-        Debug.Log("collide");
             Destroy(gameObject);
+            for(int i = 0; i < menuButtons.Length; i++){
+                menuButtons[i].GetComponent<Button>().interactable = true;
+            }
         }
     }
 
