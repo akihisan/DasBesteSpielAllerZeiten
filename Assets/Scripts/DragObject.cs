@@ -35,11 +35,12 @@ public class DragObject : MonoBehaviour
 
     void OnMouseUp()
     {
-        float x = transform.position.x;
-        float y = transform.position.y;
+        // Get the colliders of the food and character objects
+        Collider foodCollider = GetComponent<Collider>();
+        Collider characterCollider = GameObject.FindWithTag("Character").GetComponent<Collider>();
 
-
-        if (x >= -1 && x <= 1.8 && y >= 0 && y <= 4.5)
+        // Check if the food collider intersects with the character collider
+        if (foodCollider.bounds.Intersects(characterCollider.bounds))
         {
             Destroy(gameObject);
             for(int i = 0; i < menuButtons.Length; i++){

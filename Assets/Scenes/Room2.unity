@@ -843,7 +843,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f319c4c6a8475c419a54257e400d3a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1229830794}
   m_SourcePrefab: {fileID: 100100000, guid: 4f319c4c6a8475c419a54257e400d3a2, type: 3}
 --- !u!1 &453246799
 GameObject:
@@ -857,7 +860,7 @@ GameObject:
   - component: {fileID: 453246801}
   - component: {fileID: 453246800}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3716,6 +3719,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224410431}
   m_CullTransparentMesh: 1
+--- !u!1 &1229830789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f319c4c6a8475c419a54257e400d3a2, type: 3}
+  m_PrefabInstance: {fileID: 334394876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1229830794
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229830789}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.013, y: 0.032, z: 0.02}
+  m_Center: {x: 0, y: 0, z: 0.01}
 --- !u!1 &1288439850
 GameObject:
   m_ObjectHideFlags: 0
@@ -6496,7 +6525,7 @@ GameObject:
   - component: {fileID: 2065840200}
   - component: {fileID: 2065840199}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
