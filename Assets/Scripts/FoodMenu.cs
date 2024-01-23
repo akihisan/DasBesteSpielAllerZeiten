@@ -16,7 +16,7 @@ public class FoodMenu : MonoBehaviour
     void Start(){
     //objects should spawn in front of character (tagged "Character")
         GameObject character = GameObject.FindWithTag("Character");
-        spawnPosition = new Vector3(3, 2, character.transform.position.z - 1);
+        spawnPosition = new Vector3(3, 2, character.transform.position.z - 0.7f);
         menuButtons = GameObject.FindGameObjectsWithTag("MenuButton");
     }
 
