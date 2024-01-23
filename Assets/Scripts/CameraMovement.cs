@@ -38,7 +38,7 @@ public class CameraMovement : MonoBehaviour
     public void MoveRight(){
     //only move to the right if not already on last room
         if(room < maxRooms){
-            targetPosition = transform.position + new Vector3(3.7f, 0, 0);
+            targetPosition = transform.position + new Vector3(18, 0, 0);
              cameraMoving = true;
              room++;
         }
@@ -47,7 +47,7 @@ public class CameraMovement : MonoBehaviour
     public void MoveLeft(){
     //only move to the left if not already on first room
         if(room > 1){
-            targetPosition = transform.position + new Vector3(-3.7f, 0, 0);
+            targetPosition = transform.position + new Vector3(-18, 0, 0);
              cameraMoving = true;
              room--;
         }
