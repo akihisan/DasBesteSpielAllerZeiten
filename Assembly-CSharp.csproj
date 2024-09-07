@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\CharacterCustomization\FacialFeatureSelection.cs" />
+    <Compile Include="Assets\Scripts\CharacterCustomization\CharacterSelection.cs" />
     <Compile Include="Assets\Scripts\FoodMenu.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\EnterBuilding.cs" />
