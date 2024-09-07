@@ -5,20 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public GameObject FoodScreen;
-    private bool isFood;
+    public GameObject FoodScreen, desserts, drinks;
 
     void Start(){
         FoodScreen.SetActive(false);
+        desserts.SetActive(false);
+        drinks.SetActive(false);
     }
 
-    void Update(){
-        if(isFood){
-            FoodScreen.SetActive(true);
-        }else{
-            FoodScreen.SetActive(false);
-        }
-    }
 
     public void ChangeScene(string sceneName)
     {
@@ -30,11 +24,11 @@ public class SceneChanger : MonoBehaviour
     }
 
     public void OpenFood(){
-        isFood = true;
+        FoodScreen.SetActive(true);
     }
 
     public void CloseMenu(){
-        isFood = false;
+        FoodScreen.SetActive(false);
     }
 
 
