@@ -1,2 +1,7 @@
 Temp/
 .vs/
+Obj/
+Build/
+Library/
+Logs/
+MemoryCaptures/
