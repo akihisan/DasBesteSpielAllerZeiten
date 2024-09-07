@@ -354,11 +354,10 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/CameraMovement.cs"
 "Assets/Scripts/CharacterCustomization/CharacterSelection.cs"
-"Assets/Scripts/CharacterCustomization/FacialFeatureSelection.cs"
 "Assets/Scripts/DragObject.cs"
-"Assets/Scripts/EnterBuilding.cs"
 "Assets/Scripts/FoodMenu.cs"
 "Assets/Scripts/InfoTextCode.cs"
+"Assets/Scripts/MainPlaza/EnterBuilding.cs"
 "Assets/Scripts/SceneChanger.cs"
 -langversion:9.0
 
