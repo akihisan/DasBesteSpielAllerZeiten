@@ -354,6 +354,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/CameraMovement.cs"
 "Assets/Scripts/CharacterCustomization/CharacterSelection.cs"
+"Assets/Scripts/CharacterCustomization/Customize.cs"
 "Assets/Scripts/DragObject.cs"
 "Assets/Scripts/FoodMenu.cs"
 "Assets/Scripts/InfoTextCode.cs"

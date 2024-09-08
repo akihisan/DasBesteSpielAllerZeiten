@@ -22,12 +22,12 @@ public class CharacterSelection : MonoBehaviour
     {
         facialFeatureCanvas.SetActive(false);
         // Assign button click events
-        selectButton1.onClick.AddListener(() => SelectCharacter(characterPrefab1));
-        selectButton2.onClick.AddListener(() => SelectCharacter(characterPrefab2));
+        //selectButton1.onClick.AddListener(() => SelectCharacter(characterPrefab1));
+        //selectButton2.onClick.AddListener(() => SelectCharacter(characterPrefab2));
     }
 
     // Method to handle character selection
-    void SelectCharacter(GameObject characterPrefab)
+    public void SelectCharacter(GameObject characterPrefab)
     {
         selectedCharacterPrefab = characterPrefab;
         Debug.Log("Selected Character: " + selectedCharacterPrefab.name);
