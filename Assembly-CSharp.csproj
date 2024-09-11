@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\MainPlaza\EnterBuilding.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Shopping\ShopManager.cs" />
     <Compile Include="Assets\Scripts\CharacterCustomization\Customize.cs" />
     <Compile Include="Assets\Scripts\Shopping\ClearCartButton.cs" />
     <Compile Include="Assets\Scripts\CharacterCustomization\CharacterSelection.cs" />

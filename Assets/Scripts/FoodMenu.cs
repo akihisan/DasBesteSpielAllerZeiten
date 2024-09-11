@@ -16,6 +16,8 @@ public class FoodMenu : MonoBehaviour
     [HideInInspector] public int index;
     public InventoryScriptable inv;
 
+    [SerializeField] private GameObject FoodScreen, desserts, drinks, message;
+
     void Start(){
     //objects should spawn in front of character (tagged "Character")
         GameObject character = GameObject.FindWithTag("Character");
@@ -23,6 +25,22 @@ public class FoodMenu : MonoBehaviour
         menuButtons = GameObject.FindGameObjectsWithTag("MenuButton");
         //update amount of food items
         UpdateAmounts();
+
+        //set all screens inactive
+        FoodScreen.SetActive(false);
+        desserts.SetActive(false);
+        drinks.SetActive(false);
+        message.SetActive(false);
+    }
+
+    public void OpenFood()
+    {
+        FoodScreen.SetActive(true);
+    }
+
+    public void CloseMenu()
+    {
+        FoodScreen.SetActive(false);
     }
 
     void OnEnable(){
@@ -76,6 +94,13 @@ public class FoodMenu : MonoBehaviour
                 //reduce amount of spawned food
                 inv.amounts[index]--;
                 UpdateAmounts();
+                //close menu
+                CloseMenu();
+            }
+            //if it is 0, show message
+            else
+            {
+                message.SetActive(true);
             }
         }
 
@@ -87,6 +112,11 @@ public class FoodMenu : MonoBehaviour
             GameObject foodAmount = foodObjects[i].gameObject.transform.GetChild(0).gameObject;
             foodAmount.GetComponent<TextMeshProUGUI>().text = inv.amounts[i].ToString();
         }
+    }
+
+    public void CloseMessage()
+    {
+        message.SetActive(false);
     }
 
 }
