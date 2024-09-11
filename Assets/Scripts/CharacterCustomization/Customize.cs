@@ -6,6 +6,6 @@ public class Customize : MonoBehaviour
 {
     public void AddFeature(GameObject obj)
     {
-        obj.
+        
     }
 }
