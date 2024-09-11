@@ -293,6 +293,7 @@ RectTransform:
   - {fileID: 1985584960}
   - {fileID: 1324593698}
   - {fileID: 1261183571}
+  - {fileID: 1144248849}
   m_Father: {fileID: 386773801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -376,6 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoppingCartPanel: {fileID: 1985584957}
+  shopImageSize: {x: 200, y: 200}
 --- !u!1 &386773798
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +464,7 @@ Transform:
   m_GameObject: {fileID: 386773798}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 562, z: -1677}
+  m_LocalPosition: {x: 960, y: 562, z: -906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -549,6 +551,8 @@ GameObject:
   - component: {fileID: 836328694}
   - component: {fileID: 836328693}
   - component: {fileID: 836328692}
+  - component: {fileID: 836328695}
+  - component: {fileID: 836328696}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -619,7 +623,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 836328693}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 836328695}
+        m_TargetAssemblyTypeName: DeactivateCartItems, Assembly-CSharp
+        m_MethodName: DeactivateAllItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &836328693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,6 +674,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836328690}
   m_CullTransparentMesh: 1
+--- !u!114 &836328695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836328690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9b5bc0d75ecf947aff4baba6ddf316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shoppingCartPanel: {fileID: 1985584960}
+--- !u!114 &836328696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836328690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a31cedc30042f4ab71710e4559a33f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemController: {fileID: 251980231}
 --- !u!1 &1144248848
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,16 +726,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144248848}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2957527, y: 0.66200656, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1985584960}
+  m_Father: {fileID: 251980227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480, y: 499}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1307.6528, y: -71.06656}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1144248850
@@ -809,9 +851,9 @@ MonoBehaviour:
     m_Left: 0
     m_Right: 0
     m_Top: 0
-    m_Bottom: 10
+    m_Bottom: 100
   m_ChildAlignment: 0
-  m_Spacing: 10
+  m_Spacing: 100
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -870,6 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoppingCartPanel: {fileID: 1985584957}
+  shopImageSize: {x: 200, y: 200}
 --- !u!114 &1261183573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,6 +1002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoppingCartPanel: {fileID: 1985584957}
+  shopImageSize: {x: 200, y: 200}
 --- !u!114 &1324593700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,6 +1146,7 @@ GameObject:
   - component: {fileID: 1985584960}
   - component: {fileID: 1985584959}
   - component: {fileID: 1985584958}
+  - component: {fileID: 1985584961}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1158,8 +1203,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2957527, y: 0.66200656, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1144248849}
+  m_Children: []
   m_Father: {fileID: 251980227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1167,6 +1211,32 @@ RectTransform:
   m_AnchoredPosition: {x: 602, y: 128}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1985584961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985584957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 100
+  m_ChildAlignment: 0
+  m_Spacing: 100
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
