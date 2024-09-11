@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\CharacterCustomization\CharacterSelection.cs" />
     <Compile Include="Assets\Scripts\FoodMenu.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
+    <Compile Include="Assets\Scripts\InventoryScriptable.cs" />
     <Compile Include="Assets\Scripts\InfoTextCode.cs" />
     <Compile Include="Assets\Scripts\DragObject.cs" />
   </ItemGroup>

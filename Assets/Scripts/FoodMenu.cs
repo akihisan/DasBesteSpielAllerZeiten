@@ -63,7 +63,6 @@ public class FoodMenu : MonoBehaviour
         //only if amount is > 0
         if (foodItems[index].GetComponentInChildren<TextMeshProUGUI>() != null)
         {
-            string textNumber = foodItems[index].GetComponentInChildren<TextMeshProUGUI>().text;
             if (amounts[index] > 0)
             {
                 //spawn chosen food from prefab
