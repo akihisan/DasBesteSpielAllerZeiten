@@ -11,10 +11,10 @@ public class FoodMenu : MonoBehaviour
     [HideInInspector] public Vector3 spawnPosition;
     public GameObject[] tabs, buttons;
     [HideInInspector] public GameObject[] menuButtons;
-    [SerializeField] private GameObject[] foodItems;
-    public int[] amounts;
+    [SerializeField] private GameObject[] foodObjects;
     public Sprite[] menus;
     [HideInInspector] public int index;
+    public InventoryScriptable inv;
 
     void Start(){
     //objects should spawn in front of character (tagged "Character")
@@ -60,10 +60,11 @@ public class FoodMenu : MonoBehaviour
 
     public void SpawnFood()
     {
-        //only if amount is > 0
-        if (foodItems[index].GetComponentInChildren<TextMeshProUGUI>() != null)
+        //if there is a food item
+        if (inv.foodItems[index] != null)
         {
-            if (amounts[index] > 0)
+            //spawn food only if amount is > 0
+            if (inv.amounts[index] > 0)
             {
                 //spawn chosen food from prefab
                 GameObject foodToSpawn = foodPrefabs[index];
@@ -73,7 +74,7 @@ public class FoodMenu : MonoBehaviour
                     menuButtons[i].GetComponent<Button>().interactable = false;
                 }
                 //reduce amount of spawned food
-                amounts[index]--;
+                inv.amounts[index]--;
                 UpdateAmounts();
             }
         }
@@ -82,10 +83,9 @@ public class FoodMenu : MonoBehaviour
 
     private void UpdateAmounts()
     {
-        for(int i = 0; i < foodItems.Length; i++) {
-            //foodItems[i].GetComponentInChildren<TextMeshProUGUI>().text = amounts[i].ToString();
-            GameObject foodAmount = foodItems[i].gameObject.transform.GetChild(0).gameObject;
-            foodAmount.GetComponent<TextMeshProUGUI>().text = amounts[i].ToString();
+        for(int i = 0; i < foodObjects.Length; i++) {
+            GameObject foodAmount = foodObjects[i].gameObject.transform.GetChild(0).gameObject;
+            foodAmount.GetComponent<TextMeshProUGUI>().text = inv.amounts[i].ToString();
         }
     }
 
