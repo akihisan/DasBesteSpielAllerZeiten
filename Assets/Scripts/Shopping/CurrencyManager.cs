@@ -1,15 +1,34 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class CurrencyManager : MonoBehaviour
 {
     public int currentCurrency = 0; // Aktuelles Guthaben
     public TextMeshProUGUI currencyText; // Textfeld, um die Währung anzuzeigen
 
+    private const float WAIT_TIMEOUT = 5f;
+
     private void Start()
     {
-        UpdateCurrencyUI();
+        StartCoroutine(WaitForCurrencyText());
+    }
+
+    //Funktion um zu warten bis currencyText nicht mehr null
+    private IEnumerator WaitForCurrencyText()
+    {
+        float startTime = Time.time;
+
+        while (currencyText == null && Time.time - startTime < WAIT_TIMEOUT)
+        {
+            yield return new WaitForSeconds(0.1f); // Wait for 0.1 seconds before checking again
+        }
+
+        if (currencyText != null)
+        {
+            UpdateCurrencyUI();
+        }
     }
 
     // Funktion zum Hinzufügen von Währung

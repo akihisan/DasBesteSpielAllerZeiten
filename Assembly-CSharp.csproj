@@ -62,8 +62,10 @@
     <Compile Include="Assets\Scripts\MainPlaza\EnterBuilding.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Shopping\ShopManager.cs" />
+    <Compile Include="Assets\Scripts\Shopping\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\CharacterCustomization\Customize.cs" />
     <Compile Include="Assets\Scripts\Shopping\ClearCartButton.cs" />
+    <Compile Include="Assets\Scripts\Shopping\ShopItem.cs" />
     <Compile Include="Assets\Scripts\CharacterCustomization\CharacterSelection.cs" />
     <Compile Include="Assets\Scripts\Shopping\ItemController.cs" />
     <Compile Include="Assets\Scripts\FoodMenu.cs" />
