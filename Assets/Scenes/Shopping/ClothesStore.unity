@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 251980229}
   - component: {fileID: 251980228}
   - component: {fileID: 251980231}
+  - component: {fileID: 251980232}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -380,6 +381,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoppingCartPanel: {fileID: 1985584957}
   shopImageSize: {x: 200, y: 200}
+--- !u!114 &251980232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251980226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89225b5f4981374fa3e95fc1f4ad698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrice: 10
+  currencyManager: {fileID: 1987574168}
+  buyButton: {fileID: 836328692}
 --- !u!1 &386773798
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +922,7 @@ GameObject:
   - component: {fileID: 1261183574}
   - component: {fileID: 1261183573}
   - component: {fileID: 1261183572}
+  - component: {fileID: 1261183575}
   m_Layer: 5
   m_Name: Dress2
   m_TagString: Untagged
@@ -984,6 +1001,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261183570}
   m_CullTransparentMesh: 1
+--- !u!114 &1261183575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261183570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89225b5f4981374fa3e95fc1f4ad698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrice: 5
+  currencyManager: {fileID: 1987574168}
+  buyButton: {fileID: 836328692}
 --- !u!1 &1324593697
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,6 +1028,7 @@ GameObject:
   - component: {fileID: 1324593701}
   - component: {fileID: 1324593700}
   - component: {fileID: 1324593699}
+  - component: {fileID: 1324593702}
   m_Layer: 5
   m_Name: Dress1
   m_TagString: Untagged
@@ -1074,6 +1107,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324593697}
   m_CullTransparentMesh: 1
+--- !u!114 &1324593702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324593697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89225b5f4981374fa3e95fc1f4ad698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrice: 10
+  currencyManager: {fileID: 1987574168}
+  buyButton: {fileID: 836328692}
 --- !u!1 &1689423001
 GameObject:
   m_ObjectHideFlags: 0
