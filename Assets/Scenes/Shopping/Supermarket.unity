@@ -495,8 +495,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -597,6 +597,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoppingCartPanel: {fileID: 361238413}
   shopImageSize: {x: 200, y: 200}
+  totalPriceText: {fileID: 0}
+  availableItems: []
 --- !u!114 &489815407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,6 +689,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoppingCartPanel: {fileID: 361238413}
   shopImageSize: {x: 200, y: 200}
+  totalPriceText: {fileID: 0}
+  availableItems: []
 --- !u!114 &531354523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,7 +758,7 @@ RectTransform:
   m_GameObject: {fileID: 711258647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.1565, y: 5.160562, z: 3.1565}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 488069097}
@@ -763,7 +767,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -690, y: -440}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 300, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711258651
 MonoBehaviour:
@@ -901,7 +905,7 @@ RectTransform:
   m_GameObject: {fileID: 948527143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.1565, y: 5.160562, z: 3.1565}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1936627098}
@@ -910,7 +914,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 690, y: -440}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 300, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &948527145
 MonoBehaviour:
@@ -1084,6 +1088,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoppingCartPanel: {fileID: 361238413}
   shopImageSize: {x: 200, y: 200}
+  totalPriceText: {fileID: 0}
+  availableItems: []
 --- !u!114 &1096377553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,6 +1180,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoppingCartPanel: {fileID: 361238413}
   shopImageSize: {x: 200, y: 200}
+  totalPriceText: {fileID: 0}
+  availableItems: []
 --- !u!114 &1209038727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1568,6 +1576,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoppingCartPanel: {fileID: 361238413}
   shopImageSize: {x: 200, y: 200}
+  totalPriceText: {fileID: 0}
+  availableItems: []
 --- !u!114 &1703609151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1852,8 +1862,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1954,6 +1964,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoppingCartPanel: {fileID: 361238413}
   shopImageSize: {x: 200, y: 200}
+  totalPriceText: {fileID: 0}
+  availableItems: []
 --- !u!114 &1967063288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2044,6 +2056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoppingCartPanel: {fileID: 361238413}
   shopImageSize: {x: 200, y: 200}
+  totalPriceText: {fileID: 0}
+  availableItems: []
 --- !u!114 &1972752723
 MonoBehaviour:
   m_ObjectHideFlags: 0

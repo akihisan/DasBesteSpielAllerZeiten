@@ -5,10 +5,12 @@ using System.Collections;
 
 public class CurrencyManager : MonoBehaviour
 {
-    public int currentCurrency = 0; // Aktuelles Guthaben
+    public float currentCurrency = 0; // Aktuelles Guthaben
     public TextMeshProUGUI currencyText; // Textfeld, um die Währung anzuzeigen
 
-    private const float WAIT_TIMEOUT = 5f;
+    private const float WAIT_TIMEOUT = 2f;
+
+    public float totalPrice = 0;
 
     private void Start()
     {
@@ -32,18 +34,19 @@ public class CurrencyManager : MonoBehaviour
     }
 
     // Funktion zum Hinzufügen von Währung
-    public void AddCurrency(int amount)
+    public void AddCurrency(float amount)
     {
         currentCurrency += amount;
         UpdateCurrencyUI();
     }
 
     // Funktion zum Ausgeben von Währung
-    public bool SpendCurrency(int amount)
+    public bool SpendCurrency(float amount)
     {
         if (currentCurrency >= amount)
         {
             currentCurrency -= amount;
+            totalPrice = 0;
             UpdateCurrencyUI();
             return true;
         }
@@ -58,5 +61,10 @@ public class CurrencyManager : MonoBehaviour
     private void UpdateCurrencyUI()
     {
         currencyText.text = "Münzen: " + currentCurrency;
+    }
+
+    public void AddToTotal(float amount)
+    {
+        totalPrice += amount;
     }
 }
