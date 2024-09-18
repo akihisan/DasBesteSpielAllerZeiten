@@ -10,6 +10,7 @@ public class ItemController : MonoBehaviour, IPointerClickHandler
     public Vector2 shopImageSize = new Vector2(100, 100); // Größe der Bilder im Einkaufswagen.
     public TextMeshProUGUI totalPriceText;
     public CurrencyManager currencyManager;
+    public InventoryScriptable inventory;
 
     // Struct zur Speicherung von Item-Daten
     [System.Serializable]
@@ -119,7 +120,7 @@ public class ItemController : MonoBehaviour, IPointerClickHandler
 
     public void Buy()
     {
-        if(currencyManager.currentCurrency >= currencyManager.totalPrice)
+        if(inventory.currency >= currencyManager.totalPrice)
         {
             ClearCart();
             currencyManager.SpendCurrency(currencyManager.totalPrice);

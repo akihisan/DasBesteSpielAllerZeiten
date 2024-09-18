@@ -7,4 +7,5 @@ public class InventoryScriptable : ScriptableObject
 {
     public string[] foodItems;
     public int[] amounts;
+    public float currency;
 }

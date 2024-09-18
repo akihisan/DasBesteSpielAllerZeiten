@@ -1019,6 +1019,7 @@ MonoBehaviour:
   shopImageSize: {x: 200, y: 200}
   totalPriceText: {fileID: 1195561367}
   currencyManager: {fileID: 1987574168}
+  inventory: {fileID: 11400000, guid: 58ea557c50151de4eb9db75f24a48339, type: 2}
   availableItems:
   - name: Royal Dress
     image: {fileID: 21300000, guid: 31467cead1b454f4c9c866fc6bec0421, type: 3}
@@ -1118,6 +1119,7 @@ MonoBehaviour:
   shopImageSize: {x: 200, y: 200}
   totalPriceText: {fileID: 1195561367}
   currencyManager: {fileID: 1987574168}
+  inventory: {fileID: 11400000, guid: 58ea557c50151de4eb9db75f24a48339, type: 2}
   availableItems:
   - name: Royal Dress
     image: {fileID: 21300000, guid: 31467cead1b454f4c9c866fc6bec0421, type: 3}
@@ -1555,7 +1557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf7e36c073552940a3a9d6225764486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCurrency: 50
+  inventory: {fileID: 11400000, guid: 58ea557c50151de4eb9db75f24a48339, type: 2}
   currencyText: {fileID: 1689423003}
   totalPrice: 0
 --- !u!224 &1987574169

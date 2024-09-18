@@ -5,7 +5,7 @@ using System.Collections;
 
 public class CurrencyManager : MonoBehaviour
 {
-    public float currentCurrency = 0; // Aktuelles Guthaben
+    public InventoryScriptable inventory; //Hier steht aktuelles Geld des Spielers
     public TextMeshProUGUI currencyText; // Textfeld, um die Währung anzuzeigen
 
     private const float WAIT_TIMEOUT = 2f;
@@ -36,16 +36,16 @@ public class CurrencyManager : MonoBehaviour
     // Funktion zum Hinzufügen von Währung
     public void AddCurrency(float amount)
     {
-        currentCurrency += amount;
+        inventory.currency += amount;
         UpdateCurrencyUI();
     }
 
     // Funktion zum Ausgeben von Währung
     public bool SpendCurrency(float amount)
     {
-        if (currentCurrency >= amount)
+        if (inventory.currency >= amount)
         {
-            currentCurrency -= amount;
+            inventory.currency -= amount;
             totalPrice = 0;
             UpdateCurrencyUI();
             return true;
@@ -60,7 +60,7 @@ public class CurrencyManager : MonoBehaviour
     // Aktualisiere das UI, um den aktuellen Stand anzuzeigen
     private void UpdateCurrencyUI()
     {
-        currencyText.text = "Münzen: " + currentCurrency;
+        currencyText.text = "Münzen: " + inventory.currency;
     }
 
     public void AddToTotal(float amount)

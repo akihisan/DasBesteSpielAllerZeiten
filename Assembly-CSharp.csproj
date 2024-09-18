@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MainPlaza\EnterBuilding.cs" />
+    <Compile Include="Assets\Scripts\Minigames\Memory\Card.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Shopping\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\CharacterCustomization\Customize.cs" />
@@ -72,6 +73,8 @@
     <Compile Include="Assets\Scripts\FoodMenu.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\InventoryScriptable.cs" />
+    <Compile Include="Assets\Scripts\Minigames\Memory\MemoryGame.cs" />
+    <Compile Include="Assets\Scripts\Minigames\MiniGameManager.cs" />
     <Compile Include="Assets\Scripts\InfoTextCode.cs" />
     <Compile Include="Assets\Scripts\DragObject.cs" />
   </ItemGroup>
