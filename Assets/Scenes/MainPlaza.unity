@@ -1671,7 +1671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b560f8d7830a525488223bbdf1e7aacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: Mall
+  Scene: ClothesStore
 --- !u!1001 &1775625792
 PrefabInstance:
   m_ObjectHideFlags: 0

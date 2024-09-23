@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\MainPlaza\EnterBuilding.cs" />
     <Compile Include="Assets\Scripts\Minigames\Memory\Card.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Shopping\ShopManager.cs" />
     <Compile Include="Assets\Scripts\Shopping\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\CharacterCustomization\Customize.cs" />
     <Compile Include="Assets\Scripts\Shopping\NotUsed\ClearCartButton.cs" />
@@ -69,9 +70,10 @@
     <Compile Include="Assets\Scripts\Shopping\NotUsed\DeactivateCartItems.cs" />
     <Compile Include="Assets\Scripts\CharacterCustomization\CharacterSelection.cs" />
     <Compile Include="Assets\Scripts\Shopping\ItemController.cs" />
-    <Compile Include="Assets\Scripts\Shopping\NotUsed\ShopManager.cs" />
+    <Compile Include="Assets\Scripts\CharacterCustomization\NameHandler.cs" />
     <Compile Include="Assets\Scripts\FoodMenu.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
+    <Compile Include="Assets\Scripts\CharacterCustomization\PronounHandler.cs" />
     <Compile Include="Assets\Scripts\InventoryScriptable.cs" />
     <Compile Include="Assets\Scripts\Minigames\Memory\MemoryGame.cs" />
     <Compile Include="Assets\Scripts\Minigames\MiniGameManager.cs" />

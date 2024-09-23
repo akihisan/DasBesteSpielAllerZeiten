@@ -65,7 +65,7 @@ public class ItemController : MonoBehaviour, IPointerClickHandler
 
     private ItemDetails GetItemDetails(Sprite sprite)
     {
-        foreach (var item in availableItems)
+        foreach (var item in inventory.availableItems)
         {
             if (item.image == sprite)
             {
