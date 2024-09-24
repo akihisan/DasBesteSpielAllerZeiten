@@ -11,11 +11,13 @@ public class ShopManager : MonoBehaviour
     private const string LastUpdateKey = "LastShopUpdate";
     public Sprite[] shopSprites; // Array of sprites to assign to images
     public Image[] shopImages; // References to the 6 Image components
+    [SerializeField] private int category; //0 = food, 1 = clothes
+    public ShopOfferScriptable shopOffer;
 
     void Start()
     {
         CheckForDailyShopUpdate();
-        Debug.Log($"Found {shopImages.Length} image components");
+        UpdateShopInventory();      //only for testing - delete later
     }
 
     // Funktion zum Prüfen und Aktualisieren des Angebots
@@ -36,6 +38,22 @@ public class ShopManager : MonoBehaviour
             {
                 UpdateShopInventory();
             }
+            else
+            {
+                //use saved sprites from scriptable object
+                for(int i = 0; i < shopImages.Length; i++)
+                {
+                    if (category == 0)
+                    {
+                         shopImages[i].sprite = shopOffer.foods[i];
+                    }
+                    else if (category == 1)
+                    {
+                        shopImages[i].sprite = shopOffer.clothes[i];
+                    }
+                }
+                
+            }
         }
         else
         {
@@ -47,12 +65,17 @@ public class ShopManager : MonoBehaviour
     // Funktion zum Aktualisieren des Shop-Angebots
     void UpdateShopInventory()
     {
-        // Hier kannst du dein Shop-Angebot aktualisieren (zufällig oder mit einer Liste)
-        Debug.Log("Shop-Angebot aktualisiert!");
 
         // Generate unique random numbers
-        List<int> randomNumbers = GenerateUniqueRandomNumbers(6, 7);
-        Debug.Log($"Generated numbers: {string.Join(", ", randomNumbers)}");
+        List<int> randomNumbers = GenerateUniqueRandomNumbers(6, 7); ;
+        if (category == 0) //food
+        {
+            randomNumbers = GenerateUniqueRandomNumbers(6, 14);
+        }
+        else if(category == 1) //clothes
+        {
+            randomNumbers = GenerateUniqueRandomNumbers(6, 7);
+        }
 
         // Assign sprites to images based on random numbers
         AssignSprites(randomNumbers);
@@ -73,22 +96,32 @@ public class ShopManager : MonoBehaviour
             randomNumbers.Add(numbers[index]);
             numbers.RemoveAt(index);
         }
-        Debug.Log($"Generated {randomNumbers.Count} unique numbers");
         return randomNumbers;
     }
 
     void AssignSprites(List<int> numbers)
     {
-        Debug.Log($"Attempting to assign {numbers.Count} sprites");
         for (int i = 0; i < numbers.Count && i < shopImages.Length; i++)
         {
-            Debug.Log($"Assigning sprite {i}: shopSprites[{numbers[i]}]");
             if (numbers[i] >= shopSprites.Length)
             {
                 Debug.LogError($"Sprite index {numbers[i]} is out of bounds");
                 continue;
             }
             shopImages[i].sprite = shopSprites[numbers[i]];
+
+            //save current shop offer in scriptable object
+            if(category == 0)
+            {
+                shopOffer.foods[i] = shopImages[i].sprite;
+                Debug.Log("gespeichert?");
+            }
+            else if (category == 1)
+            {
+                shopOffer.clothes[i] = shopImages[i].sprite;
+                Debug.Log("gespeichert?");
+            }
+
         }
     }
 }

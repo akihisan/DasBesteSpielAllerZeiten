@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f09d12f7fdaeabf469c379b03c6c42b6, type: 3}
+  m_Name: Inventory
+  m_EditorClassIdentifier: 
+  foodItems:
+  - Takoyaki
+  - Ramen
+  - Donut
+  - Bubbletea
+  - Baguette
+  - Pizza
+  - Waffeln
+  - Biskuitrolle
+  - Eiscreme
+  - Muffin
+  - Schokolade
+  - Kaffee
+  - Spazi
+  - Tee
+  - Wasser
+  amounts: 000000000300000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  ClothesItems: []
+  amounts2: 
+  currency: 50
+  availableItems:
+  - name: Takoyaki
+    image: {fileID: 21300000, guid: 92c998803b3c6d948aff1b0f3bda3ea5, type: 3}
+    price: 2
+    category: food
+    index: 0
+  - name: Ramen
+    image: {fileID: 21300000, guid: 2d15eb2e9a7f7c9409aa0fe62d98dcbd, type: 3}
+    price: 3
+    category: food
+    index: 1
+  - name: Donut
+    image: {fileID: 21300000, guid: 7e05536d69e7ab340a2fd0d88bf71aac, type: 3}
+    price: 1
+    category: food
+    index: 2
+  - name: Bubbletea
+    image: {fileID: 21300000, guid: 5fff36f861441b040811bba4b83acc9f, type: 3}
+    price: 4
+    category: food
+    index: 3
+  - name: Baguette
+    image: {fileID: 21300000, guid: 63ee02e40a41f0b499d6477b43a1602e, type: 3}
+    price: 1
+    category: food
+    index: 4
+  - name: Pizza
+    image: {fileID: 21300000, guid: 0b6ce802093c493478a7edc535bfabb9, type: 3}
+    price: 3
+    category: food
+    index: 5
+  - name: Waffeln
+    image: {fileID: 21300000, guid: 3a2f18054d745644f885959c425b3f37, type: 3}
+    price: 3
+    category: food
+    index: 6
+  - name: Biskuitrolle
+    image: {fileID: 21300000, guid: dfb12b72a94a6ec4f9a38c02ad09be27, type: 3}
+    price: 3
+    category: food
+    index: 7
+  - name: Eiscreme
+    image: {fileID: 21300000, guid: a4d8af49aefbf494f9523ea041f7d979, type: 3}
+    price: 2
+    category: food
+    index: 8
+  - name: Muffin
+    image: {fileID: 21300000, guid: 820d41e7e95f60844aa3d955a03920d1, type: 3}
+    price: 1
+    category: food
+    index: 9
+  - name: Schokolade
+    image: {fileID: 21300000, guid: 04e2cc45f4ea28840b89ed3dd530e978, type: 3}
+    price: 1
+    category: food
+    index: 10
+  - name: Kaffee
+    image: {fileID: 21300000, guid: 4a4abe93eb0841444a9bb9ce2cbe4dd1, type: 3}
+    price: 1
+    category: food
+    index: 11
+  - name: Spazi
+    image: {fileID: 21300000, guid: 3a37e0f5515e2c6418d7fc48696df730, type: 3}
+    price: 2
+    category: food
+    index: 12
+  - name: Tee
+    image: {fileID: 21300000, guid: 3fa141c7b5a9e3a44a1c4bc757342831, type: 3}
+    price: 1
+    category: food
+    index: 13
+  - name: Wasser
+    image: {fileID: 21300000, guid: 0ee1bac0a36ee994bafd15070e09fec3, type: 3}
+    price: 1
+    category: food
+    index: 14
+  availableItems2:
+  - name: Royal Dress
+    image: {fileID: 21300000, guid: 31467cead1b454f4c9c866fc6bec0421, type: 3}
+    price: 30
+    category: clothes
+    index: 0
+  - name: Clown Dress
+    image: {fileID: 21300000, guid: d1b1fe16b93049c4cb2e8ee93d7859d6, type: 3}
+    price: 25
+    category: clothes
+    index: 1
+  - name: Witch Dress
+    image: {fileID: 21300000, guid: 2e7876cc4c5c07d48a66ddeb9b269628, type: 3}
+    price: 25
+    category: clothes
+    index: 2
+  - name: Witch Hat
+    image: {fileID: 21300000, guid: dee5d445b1886ed4382840f1699b01e3, type: 3}
+    price: 15
+    category: clothes
+    index: 3
+  - name: Dino Hoodie
+    image: {fileID: 21300000, guid: cfbe97bd57bb7a74d9c525a2006bf367, type: 3}
+    price: 15
+    category: clothes
+    index: 4
+  - name: Mushroom Sweater
+    image: {fileID: 21300000, guid: 08d650bf432370d44abd5c31d0bfc42d, type: 3}
+    price: 10
+    category: clothes
+    index: 5
+  - name: Shoe
+    image: {fileID: 21300000, guid: 74a70711bb504c9478db17d30869dc44, type: 3}
+    price: 20
+    category: clothes
+    index: 6
+  - name: Button Up Shirt
+    image: {fileID: 21300000, guid: 272cd6e43c4d3ff458ce7cfa01108805, type: 3}
+    price: 15
+    category: clothes
+    index: 7

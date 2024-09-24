@@ -11,6 +11,7 @@ public class ItemController : MonoBehaviour, IPointerClickHandler
     public TextMeshProUGUI totalPriceText;
     public CurrencyManager currencyManager;
     public InventoryScriptable inventory;
+    [SerializeField] private int category;
 
     // Struct zur Speicherung von Item-Daten
     [System.Serializable]
@@ -19,13 +20,13 @@ public class ItemController : MonoBehaviour, IPointerClickHandler
         public string name;
         public Sprite image;
         public float price;
+        public string category;
+        public int index;
     }
 
     // Dictionary zur Nachverfolgung der Anzahl und Preis jedes Items im Warenkorb
     private Dictionary<ItemDetails, GameObject> cartItems = new Dictionary<ItemDetails, GameObject>();
 
-    // Liste aller verfügbaren Items mit Preisen
-    public List<ItemDetails> availableItems;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -65,13 +66,26 @@ public class ItemController : MonoBehaviour, IPointerClickHandler
 
     private ItemDetails GetItemDetails(Sprite sprite)
     {
-        foreach (var item in inventory.availableItems)
+        if(category == 0) //food
         {
-            if (item.image == sprite)
+            foreach (var item in inventory.availableItems)
             {
-                return item;
+                if (item.image == sprite)
+                {
+                    return item;
+                }
             }
         }
+        else if (category == 1) //clothes
+        {
+            foreach (var item in inventory.availableItems2)
+            {
+                if (item.image == sprite)
+                {
+                    return item;
+                }
+            }
+        }        
         return new ItemDetails(); // Return empty struct if not found
     }
 
