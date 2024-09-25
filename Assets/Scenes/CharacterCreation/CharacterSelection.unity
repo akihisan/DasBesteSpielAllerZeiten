@@ -568,8 +568,6 @@ RectTransform:
   - {fileID: 692626589}
   - {fileID: 1646260286}
   - {fileID: 748022118}
-  - {fileID: 1615323481}
-  - {fileID: 1045673007}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1997,7 +1995,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.36716548, y: 0.6415371, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1615323481}
+  - {fileID: 1045673007}
   m_Father: {fileID: 132262519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2252,6 +2252,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876013658}
   m_CullTransparentMesh: 1
+--- !u!1 &959892202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: a7713122b9d415349b4f3b6c7bd632e2, type: 3}
+  m_PrefabInstance: {fileID: 1076858350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &959892206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959892202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395f8d47a78b1074d933c0b6207b9476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  darkSkin: {fileID: 2100000, guid: 3893062d105b96e49acd336fd009f2f0, type: 2}
+  lightSkin: {fileID: 2100000, guid: a84f153c70b91c94299143f805705045, type: 2}
 --- !u!1 &1044148254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,17 +2423,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045673006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5922, y: 5.3163557, z: 1.5922}
+  m_LocalScale: {x: 4.3364644, y: 8.286903, z: 1.5922}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 865071680}
-  m_Father: {fileID: 132262519}
+  m_Father: {fileID: 748022118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 640, y: 186}
+  m_AnchoredPosition: {x: 283.2512, y: 183.9332}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1045673008
@@ -2460,7 +2479,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1045673009}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959892206}
+        m_TargetAssemblyTypeName: TextureSwitcher, Assembly-CSharp
+        m_MethodName: ApplyLightSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1045673009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2561,7 +2592,10 @@ PrefabInstance:
     - {fileID: -4714817154256824709, guid: a7713122b9d415349b4f3b6c7bd632e2, type: 3}
     - {fileID: 8821623529969584324, guid: a7713122b9d415349b4f3b6c7bd632e2, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: a7713122b9d415349b4f3b6c7bd632e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 959892206}
   m_SourcePrefab: {fileID: 100100000, guid: a7713122b9d415349b4f3b6c7bd632e2, type: 3}
 --- !u!4 &1076858351 stripped
 Transform:
@@ -3611,17 +3645,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615323480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5922, y: 5.3163557, z: 1.5922}
+  m_LocalScale: {x: 4.3364644, y: 8.286903, z: 1.5922}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1555781597}
-  m_Father: {fileID: 132262519}
+  m_Father: {fileID: 748022118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 334, y: 186}
+  m_AnchoredPosition: {x: -550.16077, y: 183.9332}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615323482
@@ -3667,7 +3701,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1615323483}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 959892206}
+        m_TargetAssemblyTypeName: TextureSwitcher, Assembly-CSharp
+        m_MethodName: ApplyDarkSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1615323483
 MonoBehaviour:
   m_ObjectHideFlags: 0

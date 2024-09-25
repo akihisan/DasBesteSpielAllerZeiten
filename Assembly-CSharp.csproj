@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Minigames\Memory\Card.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Shopping\ShopManager.cs" />
+    <Compile Include="Assets\Scripts\CharacterCustomization\TextureSwitcher.cs" />
     <Compile Include="Assets\Scripts\Shopping\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\CharacterCustomization\Customize.cs" />
     <Compile Include="Assets\Scripts\ScripatbleObjects\InventoryScriptable.cs" />
