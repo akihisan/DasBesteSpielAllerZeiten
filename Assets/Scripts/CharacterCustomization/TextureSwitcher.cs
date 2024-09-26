@@ -3,30 +3,49 @@ using UnityEngine.UI;
 
 public class TextureSwitcher : MonoBehaviour
 {
-    // Materialien mit den verschiedenen Texturen
-    public Material darkSkin;
-    public Material lightSkin;
+    // materials
+    [SerializeField] private Material darkSkin;
+    [SerializeField] private Material lightSkin;
 
-    // Das Renderer-Objekt deines Modells
-    private Renderer modelRenderer;
+    // renderer objects of all parts that change colour
+    private Renderer[] modelRenderer;
+    [SerializeField] private GameObject[] model;
+
+    // current skin colour
+    public string colour = "dark";
 
 
     void Start()
     {
-        // Renderer des Modells holen
-        modelRenderer = GetComponent<Renderer>();
+        //make renderer array same length as model array
+        modelRenderer = new Renderer[model.Length];
 
+        // get renderers of each part
+        for (int i = 0; i < model.Length; i++)
+        {
+            modelRenderer[i] = model[i].GetComponent<Renderer>();
+        }
     }
 
-    // Methode zum Wechseln auf Material 1
     public void ApplyDarkSkin()
     {
-        modelRenderer.material = darkSkin;
+        //change all materials to dark colour
+        for (int i = 0; i < model.Length; i++)
+        {
+            modelRenderer[i].material = darkSkin;
+        }
+        //save current colour
+        colour = "dark";
     }
 
-    // Methode zum Wechseln auf Material 2
     public void ApplyLightSkin()
     {
-        modelRenderer.material = lightSkin;
+        //change all materials to light colour
+        for (int i = 0; i < model.Length; i++)
+        {
+            modelRenderer[i].material = lightSkin;
+        }
+        //save colour
+        colour = "light";
     }
 }

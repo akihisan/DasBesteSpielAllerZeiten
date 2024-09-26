@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +20,12 @@ public class CharacterSelection : MonoBehaviour
     // Variable to store the selected character prefab
     private GameObject selectedCharacterPrefab;
 
+    //reference to texture switcher
+    public TextureSwitcher ts;
+    //skin colour materials 
+    [SerializeField] private Material darkSkin;
+    [SerializeField] private Material lightSkin;
+
     void Start()
     {
         facialFeatureCanvas.SetActive(false);
@@ -32,12 +40,12 @@ public class CharacterSelection : MonoBehaviour
         selectedCharacterPrefab = characterPrefab;
         Debug.Log("Selected Character: " + selectedCharacterPrefab.name);
         
+        // Spawn the selected character in the facial feature canvas
+        SpawnSelectedCharacter();
+
         // Hide character selection canvas and show facial feature canvas
         characterSelectionCanvas.SetActive(false);
         facialFeatureCanvas.SetActive(true);
-
-        // Spawn the selected character in the facial feature canvas
-        SpawnSelectedCharacter();
     }
 
     // Method to spawn the selected character in the facial feature canvas
@@ -48,5 +56,46 @@ public class CharacterSelection : MonoBehaviour
         
         // Instantiate the selected character as a child of CharacterHolder
         Instantiate(selectedCharacterPrefab, characterHolder.transform);
+
+        //set material to chosen skin colour
+        SetSkinColour(characterHolder);
+    }
+
+    void SetSkinColour(GameObject characterHolder)
+    {
+        Renderer[] allRenderers = characterHolder.GetComponentsInChildren<Renderer>();
+
+        Renderer HeadRenderer = null;
+        Renderer BodyRenderer = null;
+
+        foreach (Renderer renderer in allRenderers)
+        {
+            string name = renderer.name.ToLower();
+            if (name.Contains("head"))
+            {
+                HeadRenderer = renderer;
+            }
+            else if (name.Contains("body"))
+            {
+                BodyRenderer = renderer;
+            }
+
+            if (HeadRenderer != null && BodyRenderer != null)
+            {
+                break; // Found both, we're done
+            }
+        }
+
+        switch (ts.colour)
+        {
+            case "dark":
+                HeadRenderer.material = darkSkin;
+                BodyRenderer.material = darkSkin;
+                break;
+            case "light":
+                HeadRenderer.material = lightSkin;
+                BodyRenderer.material = lightSkin;
+                break;
+        }
     }
 }
